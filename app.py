@@ -3,7 +3,11 @@ from random import randint
 from barcode import EAN13
 from barcode.writer import ImageWriter
 
-folder = "/home/b-man/Documents/Programming/create_bar-code/bar_codes"
+with open("data.json", "r", encoding="utf-8") as file:
+    data = file.load()
+    file.close()
+
+folder = data["folder_path"]
 
 prefix = "101"
 
