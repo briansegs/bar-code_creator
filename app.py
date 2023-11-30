@@ -1,10 +1,11 @@
 "Creates a unique EAN13 bar code"
+import json
 from random import randint
 from barcode import EAN13
 from barcode.writer import ImageWriter
 
 with open("data.json", "r", encoding="utf-8") as file:
-    data = file.load()
+    data = json.load(file)
     file.close()
 
 folder = data["folder_path"]
