@@ -4,7 +4,8 @@ from random import randint
 from barcode import EAN13
 from barcode.writer import ImageWriter
 # TODO: turn into class and then import
-# TODO: Add print statments to edit prefix or use default
+# TODO: Add print statment to edit prefix or use default
+# TODO: Add print to ask to use random 13digit num or prefix first three
 # TODO: Add welcome print statment 
 # TODO: Add option to give a barcode number or generate a random one
 # TODO: Add print statments to promt steps
