@@ -3,7 +3,7 @@ import json
 from random import randint
 from barcode import EAN13
 from barcode.writer import ImageWriter
-
+# TODO: turn into class and then import
 with open("data.json", "r", encoding="utf-8") as file:
     data = json.load(file)
     file.close()
