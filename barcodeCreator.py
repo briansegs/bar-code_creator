@@ -11,8 +11,8 @@ class BarcodeCreator:
         file.close()
     folder = data["folder_path"]
 
-    def __init__(self):
-        self.prefix = "101"
+    def __init__(self, prefix="101"):
+        self.prefix = prefix
         self.numStr = ""
         self.barCode = ""
 
