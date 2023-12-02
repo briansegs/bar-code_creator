@@ -9,6 +9,9 @@ from barcode.writer import ImageWriter
 # TODO: Add welcome print statment 
 # TODO: Add option to give a barcode number or generate a random one
 # TODO: Add print statments to promt steps
+# TODO: Make a version of the app and class that will work without the json
+# and saves the barcode to the root dir (default for EAN13().save())
+# This version will be for the public. More user friendly
 with open("data.json", "r", encoding="utf-8") as file:
     data = json.load(file)
     file.close()
