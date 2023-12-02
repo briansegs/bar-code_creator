@@ -28,6 +28,10 @@ class BarcodeCreator:
         "sets the NumStr variable with a 3 digit prefix plus a random 10 digit number"
         self.numStr = self.prefix + str(randint(1000000000, 9999999999))
 
+    def setCustomNumStr(self, customNum):
+        "sets the NumStr variable with a custom number"
+        self.numStr = customNum
+
     def createBarcodeNum(self):
         "creates a barcode number"
         self.barCode = EAN13(self.numStr, writer=ImageWriter())
