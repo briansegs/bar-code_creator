@@ -54,11 +54,19 @@ while barcodeOption not in options:
             barcodeBot.setPrefixNumStr()
             barcodeBot.saveBarcode()
 
-        # elif prefixOption == "2":
-        #     print("Enter 3 digit prefix number.")
-        #     prefixNum = input(">>> ")
+        elif prefixOption == "2":
+            while True:
+                print("Enter 3 digit prefix number.")
+                prefixNum = input(">>> ")
+                if len(prefixNum) == 3 and prefixNum.isnumeric():
+                    break
+                else:
+                    errorMsg(prefixNum)
 
-    # TODO: add option 3
-    # TODO: Add option to edit prefix or use default (expose default)
+            barcodeBot = BarcodeCreator(prefix=prefixNum)
+            print(f'Creating a barcode with prefix "{barcodeBot.prefix}"...')
+            barcodeBot.setPrefixNumStr()
+            barcodeBot.saveBarcode()
+
     else:
         errorMsg(barcodeOption)
