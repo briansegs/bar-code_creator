@@ -14,7 +14,6 @@ class BarcodeCreator:
     def __init__(self, prefix="101"):
         self.prefix = prefix
         self.numStr = ""
-        self.barCode = ""
 
     def setPrefix(self, prefixNum):
         "sets the prefix variable with parameter"
@@ -32,11 +31,8 @@ class BarcodeCreator:
         "sets the numStr variable with a parameter"
         self.numStr = customNum
 
-    def createBarcodeNum(self):
-        "creates a barcode number from stored numStr variable"
-        self.barCode = EAN13(self.numStr, writer=ImageWriter())
-
     def saveBarcode(self):
         "saves the barcode to a local folder"
-        self.barCode.save(self.folder + "/" + str(self.barCode))
-        print(f'Created bar-code: {self.barCode} in {self.folder}')
+        barCode = EAN13(self.numStr, writer=ImageWriter())
+        barCode.save(self.folder + "/" + str(barCode))
+        print(f'Created bar-code: {barCode} in {self.folder}')
