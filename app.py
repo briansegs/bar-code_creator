@@ -16,16 +16,21 @@ print("Options:")
 print("1. Use your own 13 digit number")
 print("2. Generate a random 13 digit number")
 print("3. Input a 3 digit prefix followed by a random 10 digit number")
-print("Which option would you like to use?")
 
-barcodeOption = input(">>> ")
-
-if barcodeOption == "1":
-    print("Enter your 13 digit number.")
-    customNum = input(">>> ")
-    if len(customNum) == 13 and customNum.isnumeric():
-        barcodeBot = BarcodeCreator()
-        barcodeBot.setCustomNumStr(customNum)
-        print(barcodeBot.numStr)
+barcodeOption = ""
+options = ["1", "2", "3"]
+while barcodeOption not in options:
+    print("Which option would you like to use?")
+    barcodeOption = input(">>> ")
+    if barcodeOption == "1":
+        print("Enter your 13 digit number.")
+        customNum = input(">>> ")
+        if len(customNum) == 13 and customNum.isnumeric():
+            barcodeBot = BarcodeCreator()
+            barcodeBot.setCustomNumStr(customNum)
+            print(barcodeBot.numStr)
+        else:
+            print("ok...")
     else:
-        print("ok...")
+        print("That's not an option.")
+    
