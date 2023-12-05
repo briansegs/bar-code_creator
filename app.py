@@ -36,6 +36,22 @@ while barcodeOption not in options:
         barcodeBot.setRandomNumStr()
         barcodeBot.saveBarcode()
 
+    elif barcodeOption == "3":
+        barcodeBot = BarcodeCreator()
+        while True:
+            print("Options:")
+            print(f'1. Use default prefix ({barcodeBot.prefix})')
+            print("2. Input a custom 3 digit prefix")
+            prefixNum = input(">>> ")
+            if prefixNum == "1" or prefixNum == "2":
+                break
+            print(f'Error: "{prefixNum}" is not an option')
+
+        if prefixNum == "1":
+            print(f'Creating a barcode with prefix "{prefixNum}"...')
+            barcodeBot.setPrefixNumStr()
+            barcodeBot.saveBarcode()
+
     # TODO: add option 3
     # TODO: Add option to edit prefix or use default (expose default)
     else:
