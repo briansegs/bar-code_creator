@@ -7,3 +7,8 @@ data = {
         "3" : "Input a 3 digit prefix followed by a random 10 digit number"
     }
 }
+
+def errorMsg(error):
+    "returns a generic input error"
+    errorStr = print(f'Input error: "{error}" is an invalid input.')
+    return errorStr
