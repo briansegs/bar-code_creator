@@ -34,7 +34,7 @@ class BarcodeCreator:
 
     def createBarcodeNum(self):
         "creates a barcode number from stored numStr variable"
-        self.barCode = EAN13(self.numStr, writer=ImageWriter()).get_fullcode()
+        self.barCode = EAN13(self.numStr, writer=ImageWriter())
 
     def saveBarcode(self):
         "saves the barcode to a local folder"
