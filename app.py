@@ -19,15 +19,17 @@ while barcodeOption not in options:
     print("2. Generate a random 13 digit number")
     print("3. Input a 3 digit prefix followed by a random 10 digit number")
     barcodeOption = input(">>> ")
+
     if barcodeOption == "1":
-        print("Enter your 13 digit number.")
-        customNum = input(">>> ")
-        if len(customNum) == 13 and customNum.isnumeric():
-            barcodeBot = BarcodeCreator()
-            barcodeBot.setCustomNumStr(customNum)
-            print(barcodeBot.numStr)
-        else:
-            print("ok...")
+        while True:
+            print("Enter your 13 digit number.")
+            customNum = input(">>> ")
+            if len(customNum) == 13 and customNum.isnumeric():
+                break
+            print(f'Error: "{customNum}" is not a 13 digit number.')
+        barcodeBot = BarcodeCreator()
+        barcodeBot.setCustomNumStr(customNum)
+        print(barcodeBot.numStr)
+
     else:
-        print("That's not an option.")
-    
+        print(f'Error: "{barcodeOption}" is not an option.')
