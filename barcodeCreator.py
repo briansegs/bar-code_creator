@@ -1,14 +1,11 @@
 "Bar Code Creator Class"
-import json
 from random import randint
 from barcode import EAN13
 from barcode.writer import ImageWriter
+from data import data
 
 class BarcodeCreator:
     "Creates barcodes and saves them to a local folder"
-    with open("data.json", "r", encoding="utf-8") as file:
-        data = json.load(file)
-        file.close()
     folder = data["folder_path"]
 
     def __init__(self, prefix="101"):
