@@ -12,10 +12,6 @@ class BarcodeCreator:
         self.prefix = prefix
         self.numStr = ""
 
-    def setPrefix(self, prefixNum):
-        "sets the prefix variable with parameter"
-        self.prefix = prefixNum
-
     def setRandomNumStr(self):
         "sets the numStr variable with a random 13 digit number"
         self.numStr = str(randint(1000000000000, 9999999999999))
