@@ -6,7 +6,7 @@ data = {
         "2" : "Generate a random 13 digit number",
         "3" : "Input a 3 digit prefix followed by a random 10 digit number"
     },
-    "prefix" : "202"
+    "prefix" : "101"
 }
 
 def errorMsg(error):
