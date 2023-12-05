@@ -1,6 +1,6 @@
 "Creates a EAN13 bar code"
 from barcodeCreator import BarcodeCreator
-from data import data
+from data import data, errorMsg
 
 # TODO: Add print statments to promt steps
 # TODO: Make a version of the app and class that will work without the json
@@ -24,7 +24,8 @@ while barcodeOption not in options:
             customNum = input(">>> ")
             if len(customNum) == 13 and customNum.isnumeric():
                 break
-            print(f'Error: "{customNum}" is not a 13 digit number.')
+            else:
+                errorMsg(customNum)
         print("Creating barcode...")
         barcodeBot = BarcodeCreator()
         barcodeBot.setCustomNumStr(customNum)
@@ -42,17 +43,22 @@ while barcodeOption not in options:
             print("Options:")
             print(f'1. Use default prefix ({barcodeBot.prefix})')
             print("2. Input a custom 3 digit prefix")
-            prefixNum = input(">>> ")
-            if prefixNum == "1" or prefixNum == "2":
+            prefixOption = input(">>> ")
+            if prefixOption == "1" or prefixOption == "2":
                 break
-            print(f'Error: "{prefixNum}" is not an option')
+            else:
+                errorMsg(prefixOption)
 
-        if prefixNum == "1":
-            print(f'Creating a barcode with prefix "{prefixNum}"...')
+        if prefixOption == "1":
+            print(f'Creating a barcode with prefix "{barcodeBot.prefix}"...')
             barcodeBot.setPrefixNumStr()
             barcodeBot.saveBarcode()
+
+        # elif prefixOption == "2":
+        #     print("Enter 3 digit prefix number.")
+        #     prefixNum = input(">>> ")
 
     # TODO: add option 3
     # TODO: Add option to edit prefix or use default (expose default)
     else:
-        print(f'Error: "{barcodeOption}" is not an option.')
+        errorMsg(barcodeOption)
