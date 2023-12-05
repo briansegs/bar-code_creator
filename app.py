@@ -30,7 +30,7 @@ while barcodeOption not in options:
         barcodeBot = BarcodeCreator()
         barcodeBot.setCustomNumStr(customNum)
         barcodeBot.createBarcodeNum()
-        print(barcodeBot.barCode)
+        barcodeBot.saveBarcode()
 
     else:
         print(f'Error: "{barcodeOption}" is not an option.')
