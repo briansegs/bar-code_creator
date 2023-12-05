@@ -27,10 +27,17 @@ while barcodeOption not in options:
             if len(customNum) == 13 and customNum.isnumeric():
                 break
             print(f'Error: "{customNum}" is not a 13 digit number.')
+        print("Creating barcode...")
         barcodeBot = BarcodeCreator()
         barcodeBot.setCustomNumStr(customNum)
         barcodeBot.saveBarcode()
-    # TODO: add option 2
+
+    elif barcodeOption == "2":
+        print("Creating a random 13 digit barcode...")
+        barcodeBot = BarcodeCreator()
+        barcodeBot.setRandomNumStr()
+        barcodeBot.saveBarcode()
+
     # TODO: add option 3
     else:
         print(f'Error: "{barcodeOption}" is not an option.')
