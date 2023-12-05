@@ -1,9 +1,6 @@
 "Creates a EAN13 bar code"
 from barcodeCreator import BarcodeCreator
 
-# TODO: Add print statment to edit prefix or use default
-# TODO: Add print to ask to use random 13digit num or prefix first three
-# TODO: Add option to give a barcode number or generate a random one
 # TODO: Add print statments to promt steps
 # TODO: Make a version of the app and class that will work without the json
 # and saves the barcode to the root dir (default for EAN13().save())
@@ -39,5 +36,6 @@ while barcodeOption not in options:
         barcodeBot.saveBarcode()
 
     # TODO: add option 3
+    # TODO: Add option to edit prefix or use default (expose default)
     else:
         print(f'Error: "{barcodeOption}" is not an option.')
