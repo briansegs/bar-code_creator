@@ -7,8 +7,9 @@ from data import data
 class BarcodeCreator:
     "Creates barcodes and saves them to a local folder"
     folder = data["folder_path"]
+    defaultPrefix = data["prefix"]
 
-    def __init__(self, prefix="101"):
+    def __init__(self, prefix=defaultPrefix):
         self.prefix = prefix
         self.numStr = ""
 
