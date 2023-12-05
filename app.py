@@ -10,17 +10,14 @@ from barcodeCreator import BarcodeCreator
 # This version will be for the public. More user friendly
 
 print("Let's create an EAN13 barcode.")
-print("First we need a 13 digit number.")
-print("Here are a few options to get us started.")
-print("Options:")
-print("1. Use your own 13 digit number")
-print("2. Generate a random 13 digit number")
-print("3. Input a 3 digit prefix followed by a random 10 digit number")
 
 barcodeOption = ""
 options = ["1", "2", "3"]
 while barcodeOption not in options:
-    print("Which option would you like to use?")
+    print("Options:")
+    print("1. Use your own 13 digit number")
+    print("2. Generate a random 13 digit number")
+    print("3. Input a 3 digit prefix followed by a random 10 digit number")
     barcodeOption = input(">>> ")
     if barcodeOption == "1":
         print("Enter your 13 digit number.")
