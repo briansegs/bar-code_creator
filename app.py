@@ -1,5 +1,6 @@
 "Creates a EAN13 bar code"
 from barcodeCreator import BarcodeCreator
+from data import data
 
 # TODO: Add print statments to promt steps
 # TODO: Make a version of the app and class that will work without the json
@@ -8,13 +9,13 @@ from barcodeCreator import BarcodeCreator
 
 print("Let's create an EAN13 barcode.")
 
+options = data["options"]
 barcodeOption = ""
-options = ["1", "2", "3"]
+
 while barcodeOption not in options:
     print("Options:")
-    print("1. Use your own 13 digit number")
-    print("2. Generate a random 13 digit number")
-    print("3. Input a 3 digit prefix followed by a random 10 digit number")
+    for num, option in options.items():
+        print(f'{num}. {option}')
     barcodeOption = input(">>> ")
 
     if barcodeOption == "1":
