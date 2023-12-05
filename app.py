@@ -2,7 +2,7 @@
 from barcodeCreator import BarcodeCreator
 from data import data, errorMsg
 
-# TODO: Add print statments to promt steps
+# TODO: Add timing for better user experience
 # TODO: Make a version of the app and class that will work without the json
 # and saves the barcode to the root dir (default for EAN13().save())
 # This version will be for the public. More user friendly
@@ -26,6 +26,7 @@ while barcodeOption not in options:
                 break
             else:
                 errorMsg(customNum)
+
         print("Creating barcode...")
         barcodeBot = BarcodeCreator()
         barcodeBot.setCustomNumStr(customNum)
@@ -44,6 +45,7 @@ while barcodeOption not in options:
             print(f'1. Use default prefix ({barcodeBot.prefix})')
             print("2. Input a custom 3 digit prefix")
             prefixOption = input(">>> ")
+
             if prefixOption == "1" or prefixOption == "2":
                 break
             else:
