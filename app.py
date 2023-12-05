@@ -29,7 +29,6 @@ while barcodeOption not in options:
             print(f'Error: "{customNum}" is not a 13 digit number.')
         barcodeBot = BarcodeCreator()
         barcodeBot.setCustomNumStr(customNum)
-        barcodeBot.createBarcodeNum()
         barcodeBot.saveBarcode()
 
     else:
