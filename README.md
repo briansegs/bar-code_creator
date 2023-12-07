@@ -39,3 +39,10 @@ pip install -r requirements.txt
 ```
 
 This will install all of the required packages listed in the `requirements.txt` file.
+
+## Using the Application
+
+#### Running app
+```bash
+python3 app.py
+```
