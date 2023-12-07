@@ -53,16 +53,15 @@ This will install all of the required packages listed in the `requirements.txt` 
 python3 app.py
 ```
 
-#### Using
 The app will walk you through everything you need to do. You get three options to pick from that all output a EAN13 barcode as a .png file.
 1. Use your own 13 digit number
 2. Generate a random 13 digit number
 3. Input a 3 digit prefix followed by a random 10 digit number
-    - Or use default prefix which can be set in the [data.py](https://github.com/briansegs/bar-code_creator/blob/8a575a86742b33e41bd73b3fc8277bdb0048f23a/data.py#L9) file
+    - Or use default a prefix number which can be set in the [data.py](https://github.com/briansegs/bar-code_creator/blob/8a575a86742b33e41bd73b3fc8277bdb0048f23a/data.py#L9) file
 
-#### Output .png
+#### Outputing .png files
 Steps to setup your output folder:
 1. Create a folder at the root of this project (named what ever you want) 
 2. Edit the "[folder_path](https://github.com/briansegs/bar-code_creator/blob/854f2c50eb913443102b9414fd08ae1e17972a37/data.py#L3)" key in the "[data](https://github.com/briansegs/bar-code_creator/blob/854f2c50eb913443102b9414fd08ae1e17972a37/data.py#L2)" dictionary that lives in the "[data.py](https://github.com/briansegs/bar-code_creator/blob/main/data.py)" file.
     - e.g.: /home/(your-system)/Documents/Programming/bar-code_creator/(png-output-file-name)
-    - This is an examle from my system. The path you use has to lead to the project folder.
+    - This is an examle from my system. The path you use has to lead to the project folderon your system.
