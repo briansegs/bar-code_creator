@@ -64,4 +64,5 @@ The app will walk you through everything you need to do. You get three options t
 Steps to setup your output folder:
 1. Create a folder at the root of this project (named what ever you want) 
 2. Edit the "[folder_path](https://github.com/briansegs/bar-code_creator/blob/854f2c50eb913443102b9414fd08ae1e17972a37/data.py#L3)" key in the "[data](https://github.com/briansegs/bar-code_creator/blob/854f2c50eb913443102b9414fd08ae1e17972a37/data.py#L2)" dictionary that lives in the "[data.py](https://github.com/briansegs/bar-code_creator/blob/main/data.py)" file.
-    - "/home/(your-system)/Documents/Programming/bar-code_creator/(png-output-file-name)"
+    - e.g.: /home/(your-system)/Documents/Programming/bar-code_creator/(png-output-file-name)
+    - This is an examle from my system. The path you use has to lead to the project folder.
