@@ -40,6 +40,12 @@ pip install -r requirements.txt
 
 This will install all of the required packages listed in the `requirements.txt` file.
 
+#### Key Dependencies
+
+[python-barcode](https://python-barcode.readthedocs.io/en/stable/) is a pure-python library for generating barcodes in various formats. It’s 100% pure python.
+
+[Pillow](https://python-pillow.org/) is required for generating images (e.g.: PNGs).
+
 ## Using the Application
 
 #### Running app
