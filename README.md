@@ -23,17 +23,17 @@ Instructions for setting up your virual enviornment:\
 
 #### PIP Dependencies
 
-Once you have your virtual environment setup 
+Setup virtual environment: 
 ```bash
 python3 -m venv .venv
 ```
 
-and running 
+Run virtual environment:
 ```bash
 source .venv/bin/activate
 ```
 
-install dependencies by running:
+Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
@@ -48,7 +48,7 @@ This will install all of the required packages listed in the `requirements.txt` 
 
 ## Using the Application
 
-#### Running app
+#### Running the app
 ```bash
 python3 app.py
 ```
@@ -59,9 +59,9 @@ The app will walk you through everything you need to do. You get three options t
 3. Input a 3 digit prefix followed by a random 10 digit number
     - Or use default a prefix number which can be set in the [data.py](https://github.com/briansegs/bar-code_creator/blob/8a575a86742b33e41bd73b3fc8277bdb0048f23a/data.py#L9) file
 
-#### Outputing .png files
+#### Outputting .png files
 Steps to setup your output folder:
 1. Create a folder at the root of this project (named what ever you want) 
 2. Edit the "[folder_path](https://github.com/briansegs/bar-code_creator/blob/854f2c50eb913443102b9414fd08ae1e17972a37/data.py#L3)" key in the "[data](https://github.com/briansegs/bar-code_creator/blob/854f2c50eb913443102b9414fd08ae1e17972a37/data.py#L2)" dictionary that lives in the "[data.py](https://github.com/briansegs/bar-code_creator/blob/main/data.py)" file.
     - e.g.: /home/(your-system)/Documents/Programming/bar-code_creator/(png-output-file-name)
-    - This is an examle from my system. The path you use has to lead to the project folderon your system.
+    - This is an examle from my system. The path you use has to lead to the project folder on your system.
