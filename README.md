@@ -1,7 +1,7 @@
 # Barcode-Creator
 ### I need barcodes to scan!
 
-And that is the truth. I'm working on a different project where I realized that I needed unique barcodes. I found 
+And that is the truth. I was working on a different project where I realized that I needed unique barcodes. I found 
 python-barcode and decided to make my own barcode creator. 
 
 It was fun to make and has all the features I need for my other project. If you need EAN13 barcodes or a base to build
@@ -64,4 +64,4 @@ Steps to setup your output folder:
 1. Create a folder at the root of this project (named what ever you want) 
 2. Edit the "[folder_path](https://github.com/briansegs/bar-code_creator/blob/854f2c50eb913443102b9414fd08ae1e17972a37/data.py#L3)" key in the "[data](https://github.com/briansegs/bar-code_creator/blob/854f2c50eb913443102b9414fd08ae1e17972a37/data.py#L2)" dictionary that lives in the "[data.py](https://github.com/briansegs/bar-code_creator/blob/main/data.py)" file.
     - e.g.: /home/(your-system)/Documents/Programming/bar-code_creator/(png-output-file-name)
-    - This is an examle from my system. The path you use has to lead to the project folder on your system.
+    - This is an example from my system. The path you use has to lead to the project folder on your system.
