@@ -10,6 +10,8 @@ options = data["options"]
 barcodeOption = ""
 
 while barcodeOption not in options:
+
+    # Prints out barcode creation options
     print("Options:")
     sleep(1)
     for num, option in options.items():
@@ -17,6 +19,7 @@ while barcodeOption not in options:
         sleep(1)
     barcodeOption = input(">>> ")
 
+    # Handles when option 1 is selected
     if barcodeOption == "1":
         while True:
             print("Enter your 13 digit number.")
@@ -34,6 +37,7 @@ while barcodeOption not in options:
         barcodeBot.setCustomNumStr(customNum)
         barcodeBot.saveBarcode()
 
+    # Handles when option 2 is selected
     elif barcodeOption == "2":
         print("Creating a random 13 digit barcode...")
         sleep(1)
@@ -41,6 +45,7 @@ while barcodeOption not in options:
         barcodeBot.setRandomNumStr()
         barcodeBot.saveBarcode()
 
+    # Handles when option 3 is selected
     elif barcodeOption == "3":
         barcodeBot = BarcodeCreator()
         while True:
