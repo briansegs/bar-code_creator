@@ -25,6 +25,7 @@ class BarcodeCreator:
         "sets the numStr variable with a parameter"
         self.numStr = customNum
 
+#TODO: add feature to name output file or use barcode number or a combination of both
     def saveBarcode(self):
         "saves the barcode to a local folder"
         barCode = EAN13(self.numStr, writer=ImageWriter())
