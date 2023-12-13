@@ -57,7 +57,7 @@ The app will walk you through everything you need to do. You get three options t
 1. Use your own 13 digit number
 2. Generate a random 13 digit number
 3. Input a 3 digit prefix followed by a random 10 digit number
-    - Or use default a prefix number which can be set in the [data.py](https://github.com/briansegs/bar-code_creator/blob/8a575a86742b33e41bd73b3fc8277bdb0048f23a/data.py#L9) file
+    - Or use the default prefix number which can be set in the [data.py](https://github.com/briansegs/bar-code_creator/blob/8a575a86742b33e41bd73b3fc8277bdb0048f23a/data.py#L9) file
 
 #### Outputting .png files
 Steps to setup your output folder:
