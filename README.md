@@ -61,7 +61,6 @@ The app will walk you through everything you need to do. You get three options t
 
 #### Outputting .png files
 Steps to setup your output folder:
-1. Create a folder at the root of this project (named what ever you want) 
-2. Edit the "[folder_path](https://github.com/briansegs/bar-code_creator/blob/854f2c50eb913443102b9414fd08ae1e17972a37/data.py#L3)" key in the "[data](https://github.com/briansegs/bar-code_creator/blob/854f2c50eb913443102b9414fd08ae1e17972a37/data.py#L2)" dictionary that lives in the "[data.py](https://github.com/briansegs/bar-code_creator/blob/main/data.py)" file.
-    - e.g.: /home/(your-system)/Documents/Programming/bar-code_creator/(png-output-file-name)
-    - This is an example from my system. The path you use has to lead to the project folder on your system.
+1. Create a folder at the root of this project named "barcodes".
+    - You can name the folder whatever you want but, you will have to change a value in the "[data.py](https://github.com/briansegs/bar-code_creator/blob/main/data.py)" to match the folder name you came up with.
+        - Edit the "[output _folder](https://github.com/briansegs/bar-code_creator/blob/854f2c50eb913443102b9414fd08ae1e17972a37/data.py#L3)" key in the "[data](https://github.com/briansegs/bar-code_creator/blob/854f2c50eb913443102b9414fd08ae1e17972a37/data.py#L2)" dictionary that lives in the "[data.py](https://github.com/briansegs/bar-code_creator/blob/main/data.py)" file from "barcodes" to the name of the folder you just created.
