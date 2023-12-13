@@ -6,6 +6,6 @@
 ehthumbs.db
 Thumbs.db
 
-bar_codes/
+barcodes/
 __pycache__/
 .venv/

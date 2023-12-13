@@ -6,7 +6,7 @@ from data import data
 
 class BarcodeCreator:
     "Creates barcodes and saves them to a local folder"
-    folder = data["folder_path"]
+    folder = data["output_folder"]
     defaultPrefix = data["prefix"]
 
     def __init__(self, prefix=defaultPrefix):
@@ -29,4 +29,4 @@ class BarcodeCreator:
         "saves the barcode to a local folder"
         barCode = EAN13(self.numStr, writer=ImageWriter())
         barCode.save(self.folder + "/" + str(barCode))
-        print(f'Created bar-code: {barCode} in {self.folder}')
+        print(f'Created bar-code: {barCode} in {self.folder} folder')
