@@ -30,6 +30,7 @@ class BarcodeCreator:
     def saveBarcode(self):
         "saves the barcode to a local folder"
         barCode = EAN13(self.numStr, writer=ImageWriter())
+        fileName = ""
         print("Saving file...")
         sleep(1)
         while True:
@@ -51,7 +52,8 @@ class BarcodeCreator:
                 sleep(1)
 
         if saveOption == "1":
-            barCode.save(self.folder + "/" + str(barCode))
+            fileName = str(barCode)
+            barCode.save(self.folder + "/" + fileName)
 
         elif saveOption == "2":
             while True:
