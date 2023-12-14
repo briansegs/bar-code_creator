@@ -1,8 +1,9 @@
 "Bar Code Creator Class"
+from time import sleep
 from random import randint
 from barcode import EAN13
 from barcode.writer import ImageWriter
-from data import data
+from data import data, errorMsg
 
 class BarcodeCreator:
     "Creates barcodes and saves them to a local folder"
@@ -29,5 +30,34 @@ class BarcodeCreator:
     def saveBarcode(self):
         "saves the barcode to a local folder"
         barCode = EAN13(self.numStr, writer=ImageWriter())
-        barCode.save(self.folder + "/" + str(barCode))
+        while True:
+            print("Saving file...")
+            sleep(1)
+            print("File naming options:")
+            sleep(.5)
+            print(f'1. Use barcode number "{barCode}"')
+            sleep(.5)
+            print("2. Use your own custom name")
+            sleep(.5)
+            print(f'3. Use a custom name combined with the barcode number "{barCode}"')
+            saveOption = input(">>> ")
+            sleep(1)
+            
+            if saveOption == "1" or saveOption == "2" or saveOption == "3":
+                break
+            else:
+                errorMsg(saveOption)
+                sleep(1)
+        
+        if saveOption == "1":
+            barCode.save(self.folder + "/" + str(barCode))
+        if saveOption == "2":
+            
+            print("Enter your file name.")
+            sleep(.5)
+            barName = input(">>> ")
+            
+            
+        if saveOption == "3":
+            
         print(f'Created bar-code: {barCode} in {self.folder} folder')
