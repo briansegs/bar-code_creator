@@ -3,7 +3,7 @@ from time import sleep
 from random import randint
 from barcode import EAN13
 from barcode.writer import ImageWriter
-from data import data, errorMsg
+from data import data, errorMsg, getFileName
 
 class BarcodeCreator:
     "Creates barcodes and saves them to a local folder"
@@ -56,25 +56,7 @@ class BarcodeCreator:
             barCode.save(self.folder + "/" + fileName)
 
         elif saveOption == "2":
-            while True:
-                print("Enter your file name.")
-                sleep(.5)
-                fileName = input(">>> ")
-                sleep(1)
-                isCorrect = ""
-                while isCorrect.lower() != "y" and isCorrect.lower() != "n":
-                    print(f'If name "{fileName}" is correct enter "Y" else enter "N".')
-                    sleep(.5)
-                    isCorrect = input(">>> ")
-                    sleep(1)
-                    if isCorrect.lower() != "y" and isCorrect.lower() != "n":
-                        errorMsg(isCorrect)
-                        sleep(1)
-                if isCorrect.lower() == "y":
-                    break
-                elif isCorrect.lower() == "n":
-                    pass
-
+            fileName = getFileName()
             barCode.save(self.folder + "/" + fileName)
 
         # if saveOption == "3":
