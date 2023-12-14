@@ -30,34 +30,51 @@ class BarcodeCreator:
     def saveBarcode(self):
         "saves the barcode to a local folder"
         barCode = EAN13(self.numStr, writer=ImageWriter())
+        print("Saving file...")
+        sleep(1)
         while True:
-            print("Saving file...")
-            sleep(1)
             print("File naming options:")
-            sleep(.5)
+            sleep(1)
             print(f'1. Use barcode number "{barCode}"')
-            sleep(.5)
+            sleep(1)
             print("2. Use your own custom name")
-            sleep(.5)
+            sleep(1)
             print(f'3. Use a custom name combined with the barcode number "{barCode}"')
+            sleep(.5)
             saveOption = input(">>> ")
             sleep(1)
-            
+
             if saveOption == "1" or saveOption == "2" or saveOption == "3":
                 break
             else:
                 errorMsg(saveOption)
                 sleep(1)
-        
+
         if saveOption == "1":
             barCode.save(self.folder + "/" + str(barCode))
-        if saveOption == "2":
-            
-            print("Enter your file name.")
-            sleep(.5)
-            barName = input(">>> ")
-            
-            
-        if saveOption == "3":
-            
-        print(f'Created bar-code: {barCode} in {self.folder} folder')
+
+        elif saveOption == "2":
+            while True:
+                print("Enter your file name.")
+                sleep(.5)
+                fileName = input(">>> ")
+                sleep(1)
+                isCorrect = ""
+                while isCorrect.lower() != "y" and isCorrect.lower() != "n":
+                    print(f'If name "{fileName}" is correct enter "Y" else enter "N".')
+                    sleep(.5)
+                    isCorrect = input(">>> ")
+                    sleep(1)
+                    if isCorrect.lower() != "y" and isCorrect.lower() != "n":
+                        errorMsg(isCorrect)
+                        sleep(1)
+                if isCorrect.lower() == "y":
+                    break
+                elif isCorrect.lower() == "n":
+                    pass
+
+            barCode.save(self.folder + "/" + fileName)
+
+        # if saveOption == "3":
+
+        print(f'Created bar-code "{barCode}" in "{self.folder}" folder')
