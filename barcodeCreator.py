@@ -79,4 +79,4 @@ class BarcodeCreator:
 
         # if saveOption == "3":
 
-        print(f'Created file "{fileName}" with bar-code "{barCode}" in "{self.folder}" folder')
+        print(f'Created file "{fileName}.png" with bar-code "{barCode}" in "{self.folder}" folder.')
