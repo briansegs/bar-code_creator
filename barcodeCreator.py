@@ -59,6 +59,9 @@ class BarcodeCreator:
             fileName = getFileName()
             barCode.save(self.folder + "/" + fileName)
 
-        # if saveOption == "3":
+        elif saveOption == "3":
+            fileName = getFileName()
+            barCode.save(self.folder + "/" + fileName + "_" + str(barCode))
+            fileName = fileName + "_" + str(barCode)
 
         print(f'Created file "{fileName}.png" with bar-code "{barCode}" in "{self.folder}" folder.')
