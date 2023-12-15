@@ -4,7 +4,7 @@ from barcodeCreator import BarcodeCreator
 from data import data, errorMsg
 
 print("Let's create an EAN13 barcode")
-sleep(2)
+sleep(1)
 
 options = data["options"]
 barcodeOption = ""
@@ -23,7 +23,7 @@ while barcodeOption not in options:
     if barcodeOption == "1":
         while True:
             print("Enter your 13 digit number.")
-            sleep(1)
+            sleep(.5)
             customNum = input(">>> ")
             if len(customNum) == 13 and customNum.isnumeric():
                 break
