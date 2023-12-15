@@ -18,6 +18,7 @@ while barcodeOption not in options:
         print(f'{num}. {option}')
         sleep(1)
     barcodeOption = input(">>> ")
+    sleep(1)
 
     # Handles when option 1 is selected
     if barcodeOption == "1":
