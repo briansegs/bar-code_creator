@@ -9,6 +9,7 @@ class BarcodeCreator:
     "Creates barcodes and saves them to a local folder"
     folder = data["output_folder"]
     defaultPrefix = data["prefix"]
+    printOptions = data["print_options"]
 
     def __init__(self, prefix=defaultPrefix):
         self.prefix = prefix
@@ -35,12 +36,9 @@ class BarcodeCreator:
         while True:
             print("File naming options:")
             sleep(1)
-            print(f'1. Use barcode number "{barCode}"')
-            sleep(1)
-            print("2. Use your own custom name")
-            sleep(1)
-            print(f'3. Use a custom name combined with the barcode number "{barCode}"')
-            sleep(.5)
+            for num, option in self.printOptions.items():
+                print(f'{num}. {option}')
+                sleep(1)
             saveOption = input(">>> ")
             sleep(1)
 
