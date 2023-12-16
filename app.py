@@ -1,7 +1,8 @@
 "Creates a EAN13 bar code"
 from time import sleep
 from barcodeCreator import BarcodeCreator
-from data import data, errorMsg
+from data import data
+from functions import errorMsg
 
 print("Let's create an EAN13 barcode")
 sleep(1)

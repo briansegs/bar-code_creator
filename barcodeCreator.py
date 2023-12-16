@@ -3,7 +3,8 @@ from time import sleep
 from random import randint
 from barcode import EAN13
 from barcode.writer import ImageWriter
-from data import data, errorMsg, getFileName
+from data import data
+from functions import errorMsg, getFileName
 
 class BarcodeCreator:
     "Creates barcodes and saves them to a local folder"
